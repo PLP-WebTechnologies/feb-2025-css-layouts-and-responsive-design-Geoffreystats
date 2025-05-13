@@ -1,0 +1,93 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and General Layout */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #333;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 10px 0;
+}
+
+nav ul li {
+  padding: 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet: Adjust layout for smaller screens */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile: Single column layout for small screens */
+@media (max-width: 480px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 15px;
+  }
+}
